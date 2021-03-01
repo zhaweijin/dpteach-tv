@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dp.launcher.tv.main.login.FocusLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".main.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:background="@drawable/login_main_item_focus_selector"
+        android:layout_width="match_parent"
+        android:layout_height="174dp">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="800dp"
+            android:layout_height="110dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_marginLeft="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/ic_launcher_round">
+            </ImageView>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_marginLeft="40dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="同步已购买课程"
+                    android:id="@+id/name"
+                    android:textColor="@android:color/white"
+                    android:textSize="42sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/sub_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="同步已购买课程"
+                    android:textColor="@android:color/white"
+                    android:textSize="38sp"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:visibility="invisible"
+            android:layout_width="17dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right|center_vertical"
+            android:background="@mipmap/ic_launcher_round"/>
+    </FrameLayout>
+</com.dp.launcher.tv.main.login.FocusLayout>

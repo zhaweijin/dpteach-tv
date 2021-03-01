@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.MainActivity">
+
+    <LinearLayout
+        android:layout_width="861dp"
+        android:layout_height="181dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginLeft="34dp"
+            android:layout_width="113dp"
+            android:layout_height="113dp"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/ic_launcher_round">
+        </ImageView>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_marginLeft="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="同步已购买课程"
+                android:id="@+id/name"
+                android:textColor="@android:color/white"
+                android:textSize="42sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/sub_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="同步已购买课程"
+                android:textColor="@android:color/white"
+                android:textSize="29sp"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

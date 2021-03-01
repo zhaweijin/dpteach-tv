@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_scan_code"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.MainActivity">
+
+    <FrameLayout
+        android:background="@android:color/holo_red_light"
+        android:layout_marginTop="264dp"
+        android:layout_width="match_parent"
+        android:layout_height="672dp">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/scan_code"
+            android:layout_margin="20dp"
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.facebook.drawee.view.SimpleDraweeView>
+
+        <TextView
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="44dp"
+            android:text="微信/大鹏教育APP扫描登录"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+    </FrameLayout>
+
+
+
+</FrameLayout>

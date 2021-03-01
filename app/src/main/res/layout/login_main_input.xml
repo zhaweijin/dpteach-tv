@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.MainActivity">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="134dp"
+        android:layout_marginLeft="120dp"
+        android:layout_width="944dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:background="@android:color/holo_red_light"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+        </ImageView>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="315dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_gravity="center_horizontal"
+                    android:background="@mipmap/ic_launcher_round"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+                </ImageView>
+
+                <TextView
+                    android:text="尊享大屏观看体验"
+                    android:textColor="@android:color/white"
+                    android:textSize="34sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+            </LinearLayout>
+
+            <View
+                android:background="@android:color/white"
+                android:layout_width="1dp"
+                android:layout_height="match_parent">
+            </View>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="315dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_gravity="center_horizontal"
+                    android:background="@mipmap/ic_launcher_round"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+                </ImageView>
+
+                <TextView
+                    android:text="同步已购买课程"
+                    android:textColor="@android:color/white"
+                    android:textSize="34sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+            </LinearLayout>
+
+            <View
+                android:background="@android:color/white"
+                android:layout_width="1dp"
+                android:layout_height="match_parent">
+            </View>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="315dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_gravity="center_horizontal"
+                    android:background="@mipmap/ic_launcher_round"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+                </ImageView>
+
+                <TextView
+                    android:text="扫描一键交作业"
+                    android:textColor="@android:color/white"
+                    android:textSize="34sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="36dp"
+            android:id="@+id/mode_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:textSize="25sp"
+            android:layout_marginTop="15dp"
+            android:text="@string/login_user_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+    </LinearLayout>
+
+
+
+
+
+    <FrameLayout
+        android:layout_marginLeft="1218dp"
+        android:layout_width="582dp"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/login_main_scan_code"></include>
+        <include layout="@layout/login_main_phone_input"></include>
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">大麦教育</string>
+    <string name="login_scan_login">扫码登录</string>
+    <string name="login_scan_login_sub">使用微信或大鹏教育APP扫码登录</string>
+    <string name="login_phone_login">手机验证码登录</string>
+    <string name="login_phone_login_sub">遥控器输入手机号登录</string>
+    <string name="login_user_agreement">登录即代表您同意《用户协议》和《隐私协议》</string>
+    <string name="phone_code_send_success">验证码已发送手机：%s</string>
+
+    <string name="clear">清空</string>
+    <string name="delete">删除</string>
+</resources>
