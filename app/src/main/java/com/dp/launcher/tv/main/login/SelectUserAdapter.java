@@ -19,6 +19,8 @@ public class SelectUserAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     private Context mContext;
     private List<String> mDatas;
 
+
+
     /**
      * activity 调用
      *

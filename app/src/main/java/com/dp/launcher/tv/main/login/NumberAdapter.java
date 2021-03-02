@@ -70,7 +70,7 @@ public class NumberAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         public void onClick(View view) {
             if(loginItemClickListener!=null){
                 int id = (int) view.getTag();
-                loginItemClickListener.onItemClick(mDatas.get(id).getName());
+                loginItemClickListener.onItemClick(id);
             }
         }
     }

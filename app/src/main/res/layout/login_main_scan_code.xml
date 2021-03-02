@@ -19,9 +19,20 @@
             android:layout_height="match_parent">
         </com.facebook.drawee.view.SimpleDraweeView>
 
+        <View
+            android:layout_marginTop="542dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/login_scan_code_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></View>
+
         <TextView
-            android:textColor="@android:color/white"
+            android:textColor="#FF18252C"
+            android:layout_marginTop="23dp"
             android:layout_marginBottom="44dp"
+            android:textSize="30sp"
+            android:id="@+id/scan_code_tips"
             android:text="微信/大鹏教育APP扫描登录"
             android:layout_gravity="bottom|center_horizontal"
             android:layout_width="wrap_content"

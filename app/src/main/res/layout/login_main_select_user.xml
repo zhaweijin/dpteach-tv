@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/login_main_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
     tools:context=".main.MainActivity">
 
+    <include layout="@layout/logo"></include>
+
     <TextView
+        android:layout_marginTop="140dp"
         android:layout_gravity="center_horizontal"
         android:textColor="@android:color/white"
         android:textSize="60sp"
@@ -16,9 +20,13 @@
     </TextView>
 
 
-    <androidx.recyclerview.widget.RecyclerView
+    <com.dp.launcher.tv.utils.HiveRecyclerView
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_marginTop="298dp"
+        android:layout_marginLeft="101dp"
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    </androidx.recyclerview.widget.RecyclerView>
+    </com.dp.launcher.tv.utils.HiveRecyclerView>
 </FrameLayout>

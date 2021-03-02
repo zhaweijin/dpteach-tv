@@ -6,27 +6,28 @@ import android.util.AttributeSet;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.RelativeLayout;
+
 import com.dp.launcher.tv.R;
 
 
-public class FocusLayout extends RelativeLayout {
+public class LoginItemFocusLayout extends RelativeLayout {
 
     private Animation scaleSmallAnimation;
     private Animation scaleBigAnimation;
 
     private final static String tag = "focus_layout";
 
-    public FocusLayout(Context context) {
+    public LoginItemFocusLayout(Context context) {
         super(context);
         //this.setOnKeyListener(onKeyListener);
     }
 
-    public FocusLayout(Context context, AttributeSet attrs) {
+    public LoginItemFocusLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         //this.setOnKeyListener(onKeyListener);
     }
 
-    public FocusLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+    public LoginItemFocusLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         //this.setOnKeyListener(onKeyListener);
     }
@@ -59,7 +60,7 @@ public class FocusLayout extends RelativeLayout {
 
     private void zoomOut() {
         if (scaleBigAnimation == null) {
-            scaleBigAnimation = AnimationUtils.loadAnimation(getContext(), R.anim.focus_layout_anim_zoom_in);
+            scaleBigAnimation = AnimationUtils.loadAnimation(getContext(), R.anim.login_focus_item_zoom_in);
         }
         startAnimation(scaleBigAnimation);
     }

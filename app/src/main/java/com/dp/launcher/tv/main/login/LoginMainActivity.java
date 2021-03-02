@@ -4,6 +4,9 @@ package com.dp.launcher.tv.main.login;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
+
 import com.dp.launcher.tv.R;
 import com.dp.launcher.tv.base.BaseActivity;
 import java.util.LinkedList;
@@ -12,12 +15,13 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
+import butterknife.BindView;
 
 
 public class LoginMainActivity extends BaseActivity {
 
-    private Queue<Integer> receive_phone_code = new LinkedList<Integer>();
     private FragmentManager fragmentManager;
+
 
     public static void launch(Context context) {
         Intent intent = new Intent(context, LoginMainActivity.class);
@@ -31,6 +35,8 @@ public class LoginMainActivity extends BaseActivity {
 
         fragmentManager = getSupportFragmentManager();
         switchInputFragment();
+        //switchSelectUserFragment();
+        //switchUserCenterFragment();
     }
 
 
@@ -56,19 +62,6 @@ public class LoginMainActivity extends BaseActivity {
     }
 
 
-    private void initPhoneInputRecyclerview(){
-        GridLayoutManager manager = new GridLayoutManager(mContext, 3);
-        //rectangle_recyclerview.setLayoutManager(manager);
 
-        /*rectangle_recyclerview.addItemDecoration(new RecyclerView.ItemDecoration() {
-            @Override
-            public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
-                outRect.set(0, 0, 0, 0);
-            }
-        });*/
-    }
 
-    private void showPhoneInputUI(){
-
-    }
 }

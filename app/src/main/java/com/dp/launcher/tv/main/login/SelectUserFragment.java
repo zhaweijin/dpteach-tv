@@ -6,6 +6,7 @@ import android.view.View;
 
 import com.dp.launcher.tv.R;
 import com.dp.launcher.tv.base.BaseFragment;
+import com.dp.launcher.tv.utils.HiveRecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +18,7 @@ import butterknife.BindView;
 public class SelectUserFragment extends BaseFragment {
 
     @BindView(R.id.recyclerview)
-    RecyclerView recyclerView;
+    HiveRecyclerView recyclerView;
 
     @Override
     protected int getLayoutId() {
@@ -35,11 +36,14 @@ public class SelectUserFragment extends BaseFragment {
         recyclerView.addItemDecoration(new RecyclerView.ItemDecoration() {
             @Override
             public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
-                outRect.set(0, 0, mContext.getResources().getDimensionPixelSize(R.dimen.login_select_user_item_margin_right), mContext.getResources().getDimensionPixelSize(R.dimen.login_select_user_item_margin_bottom));
+                outRect.set(0, 0, mContext.getResources().getDimensionPixelSize(R.dimen.dp_18), mContext.getResources().getDimensionPixelSize(R.dimen.dp_34));
             }
         });
 
         List<String> mDatas = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            mDatas.add("i"+i);
+        }
         SelectUserAdapter adapter =  new SelectUserAdapter(mContext,mDatas);
         recyclerView.setAdapter(adapter);
     }

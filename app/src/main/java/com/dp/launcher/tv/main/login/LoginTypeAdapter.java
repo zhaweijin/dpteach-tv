@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.dp.launcher.tv.R;
+import com.dp.launcher.tv.utils.Utils;
+
 import java.util.List;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -52,6 +54,8 @@ public class LoginTypeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         viewHolder.icon.setImageResource(entity.getIcon());
         viewHolder.subName.setText(entity.getSub_name());
 
+
+
     }
 
     @Override
@@ -63,12 +67,14 @@ public class LoginTypeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         ImageView icon;
         TextView mName;
         TextView subName;
+        ImageView arrow;
 
         RecyclerViewHolder(View itemView) {
             super(itemView);
             mName = (TextView) itemView.findViewById(R.id.name);
             icon = (ImageView) itemView.findViewById(R.id.icon);
             subName = (TextView) itemView.findViewById(R.id.sub_name);
+            arrow = (ImageView)itemView.findViewById(R.id.arrow);
             itemView.setOnFocusChangeListener(this);
         }
 
@@ -77,6 +83,12 @@ public class LoginTypeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         public void onFocusChange(View view, boolean b) {
             int id = (int) view.getTag();
             if(b && loginItemFocusListener!=null) loginItemFocusListener.onFocusItem(id);
+            Utils.print(TAG,"focus="+b);
+            if(b){
+                arrow.setVisibility(View.VISIBLE);
+            }else{
+                arrow.setVisibility(View.INVISIBLE);
+            }
         }
     }
 

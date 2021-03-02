@@ -6,4 +6,7 @@
 
     <color name="login_input_number_unselected"></color>
     <color name="login_input_number_selected"></color>
+
+    <color name="login_line">#25FFFFFF</color>
+    <color name="login_input_main_color">#99FFFFFF</color>
 </resources>

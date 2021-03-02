@@ -5,11 +5,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.dp.launcher.tv.R;
 import com.dp.launcher.tv.base.BaseFragment;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -33,6 +36,27 @@ public class LoginInputFragment extends BaseFragment {
     @BindView(R.id.number_recyclerview)
     RecyclerView number_recyclerview;
 
+    @BindView(R.id.receiver_code1)
+    TextView receiver_code1;
+    @BindView(R.id.receiver_code2)
+    TextView receiver_code2;
+    @BindView(R.id.receiver_code3)
+    TextView receiver_code3;
+    @BindView(R.id.receiver_code4)
+    TextView receiver_code4;
+
+    @BindView(R.id.tips)
+    TextView tips;
+
+    @BindView(R.id.input_phone)
+    TextView input_phone;
+
+    @BindView(R.id.layout_receive_code)
+    LinearLayout layout_receive_code;
+
+    private boolean send_phone_code_success = false;
+    private Queue<Integer> receive_phone_code = new LinkedList<Integer>();
+
 
     @Override
     protected int getLayoutId() {
@@ -46,9 +70,10 @@ public class LoginInputFragment extends BaseFragment {
         initMode();
         initNumberRecyclerview();
 
-        layout_phone_input.setVisibility(View.VISIBLE);
-        layout_scan_code.setVisibility(View.INVISIBLE);
+
     }
+
+
 
     private void initNumberRecyclerview(){
         GridLayoutManager manager = new GridLayoutManager(mContext,3);
@@ -80,6 +105,13 @@ public class LoginInputFragment extends BaseFragment {
 
         NumberAdapter numberAdapter =  new NumberAdapter(mContext,mDatas);
         number_recyclerview.setAdapter(numberAdapter);
+
+        numberAdapter.setLoginItemClickListener(new LoginItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+
+            }
+        });
     }
 
     private void initMode(){
@@ -87,13 +119,13 @@ public class LoginInputFragment extends BaseFragment {
         List<LoginTypeData> loginTypeData = new ArrayList<>();
 
         LoginTypeData scan_code = new LoginTypeData();
-        scan_code.setIcon(R.drawable.ic_launcher_background);
+        scan_code.setIcon(R.drawable.login_item_scan_code_icon);
         scan_code.setName(mContext.getResources().getString(R.string.login_scan_login));
         scan_code.setSub_name(mContext.getResources().getString(R.string.login_scan_login_sub));
         loginTypeData.add(scan_code);
 
         LoginTypeData phone_data = new LoginTypeData();
-        phone_data.setIcon(R.drawable.ic_launcher_background);
+        phone_data.setIcon(R.drawable.login_item_phone_icon);
         phone_data.setName(mContext.getResources().getString(R.string.login_phone_login));
         phone_data.setSub_name(mContext.getResources().getString(R.string.login_phone_login_sub));
         loginTypeData.add(phone_data);
@@ -104,7 +136,7 @@ public class LoginInputFragment extends BaseFragment {
         mode_recyclerview.addItemDecoration(new RecyclerView.ItemDecoration() {
             @Override
             public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
-                outRect.set(0, mContext.getResources().getDimensionPixelSize(R.dimen.logon_item_div), 0, 0);
+                outRect.set(0, mContext.getResources().getDimensionPixelSize(R.dimen.dp_20), 0, 0);
             }
         });
 
@@ -132,5 +164,14 @@ public class LoginInputFragment extends BaseFragment {
     private void switchItemPhone(){
         layout_scan_code.setVisibility(View.INVISIBLE);
         layout_phone_input.setVisibility(View.VISIBLE);
+
+        if(send_phone_code_success){
+            input_phone.setVisibility(View.INVISIBLE);
+            layout_receive_code.setVisibility(View.VISIBLE);
+        }else {
+            input_phone.setVisibility(View.VISIBLE);
+            layout_receive_code.setVisibility(View.INVISIBLE);
+            input_phone.setText(mContext.getResources().getString(R.string.login_please_input_phone));
+        }
     }
 }

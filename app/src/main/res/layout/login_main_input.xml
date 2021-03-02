@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:clipChildren="false"
+    android:clipToPadding="false"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".main.MainActivity">
 
+    <include layout="@layout/logo"></include>
 
     <LinearLayout
+        android:clipChildren="false"
+        android:clipToPadding="false"
         android:orientation="vertical"
         android:layout_marginTop="134dp"
         android:layout_marginLeft="120dp"
-        android:layout_width="944dp"
+        android:layout_width="991dp"
         android:layout_height="wrap_content">
 
         <ImageView
-            android:background="@android:color/holo_red_light"
-            android:layout_width="match_parent"
+            android:background="@drawable/login_icon_ad"
+            android:layout_width="944dp"
             android:layout_height="150dp">
         </ImageView>
 
         <LinearLayout
             android:layout_marginTop="20dp"
             android:orientation="horizontal"
-            android:layout_width="match_parent"
+            android:layout_width="944dp"
             android:layout_height="wrap_content">
             <LinearLayout
                 android:orientation="vertical"
@@ -31,14 +36,14 @@
 
                 <ImageView
                     android:layout_gravity="center_horizontal"
-                    android:background="@mipmap/ic_launcher_round"
+                    android:background="@drawable/login_icon_hd"
                     android:layout_width="100dp"
                     android:layout_height="100dp">
                 </ImageView>
 
                 <TextView
                     android:text="尊享大屏观看体验"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/login_input_main_color"
                     android:textSize="34sp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="24dp"
@@ -60,14 +65,14 @@
 
                 <ImageView
                     android:layout_gravity="center_horizontal"
-                    android:background="@mipmap/ic_launcher_round"
+                    android:background="@drawable/login_icon_online"
                     android:layout_width="100dp"
                     android:layout_height="100dp">
                 </ImageView>
 
                 <TextView
                     android:text="同步已购买课程"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/login_input_main_color"
                     android:textSize="34sp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="24dp"
@@ -89,14 +94,14 @@
 
                 <ImageView
                     android:layout_gravity="center_horizontal"
-                    android:background="@mipmap/ic_launcher_round"
+                    android:background="@drawable/login_icon_scan"
                     android:layout_width="100dp"
                     android:layout_height="100dp">
                 </ImageView>
 
                 <TextView
                     android:text="扫描一键交作业"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/login_input_main_color"
                     android:textSize="34sp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="24dp"
@@ -107,24 +112,30 @@
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:clipChildren="false"
+            android:clipToPadding="false"
             android:layout_marginTop="36dp"
             android:id="@+id/mode_recyclerview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         </androidx.recyclerview.widget.RecyclerView>
 
-        <TextView
-            android:layout_gravity="center_horizontal"
-            android:textSize="25sp"
+        <LinearLayout
+            android:layout_width="944dp"
             android:layout_marginTop="15dp"
-            android:text="@string/login_user_agreement"
-            android:layout_width="wrap_content"
+            android:orientation="vertical"
             android:layout_height="wrap_content">
-        </TextView>
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:textSize="25sp"
+                android:textColor="#99FFFFFF"
+                android:text="@string/login_user_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+        </LinearLayout>
+
     </LinearLayout>
-
-
-
 
 
     <FrameLayout
@@ -135,5 +146,35 @@
         <include layout="@layout/login_main_scan_code"></include>
         <include layout="@layout/login_main_phone_input"></include>
     </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_back_tips"
+        android:layout_marginBottom="60dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="32sp"
+            android:textColor="@color/login_input_main_color"
+            android:text="按 "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+        <TextView
+            android:textSize="32sp"
+            android:textColor="#00C76B"
+            android:text="【返回键】"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+        <TextView
+            android:textSize="32sp"
+            android:textColor="@color/login_input_main_color"
+            android:text=" 返回主页"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+    </LinearLayout>
 
 </FrameLayout>

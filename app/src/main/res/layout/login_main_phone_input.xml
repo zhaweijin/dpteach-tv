@@ -18,7 +18,7 @@
             <TextView
                 android:id="@+id/tips"
                 android:textSize="30sp"
-                android:text="@string/phone_code_send_success"
+                android:text=""
                 android:textColor="@android:color/white"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
@@ -27,16 +27,19 @@
             <FrameLayout
                 android:layout_marginTop="32dp"
                 android:layout_width="match_parent"
-                android:background="@android:color/holo_red_light"
+                android:background="#FF3C3C50"
                 android:layout_height="126dp">
                 <TextView
                     android:id="@+id/input_phone"
                     android:gravity="center"
                     android:visibility="gone"
+                    android:textSize="44sp"
+                    android:textColor="@android:color/white"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                 </TextView>
                 <LinearLayout
+                    android:id="@+id/layout_receive_code"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -47,7 +50,7 @@
                             android:layout_gravity="center"
                             android:id="@+id/receiver_code1"
                             android:textSize="50sp"
-                            android:text="2"
+                            android:text=""
                             android:textColor="@android:color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
@@ -56,6 +59,8 @@
 
                     <View
                         android:background="@android:color/white"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginBottom="50dp"
                         android:layout_width="1dp"
                         android:layout_height="match_parent">
                     </View>
@@ -66,7 +71,7 @@
                             android:id="@+id/receiver_code2"
                             android:layout_gravity="center"
                             android:textSize="50sp"
-                            android:text="1"
+                            android:text=""
                             android:textColor="@android:color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
@@ -76,6 +81,8 @@
                     <View
                         android:background="@android:color/white"
                         android:layout_width="1dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginBottom="50dp"
                         android:layout_height="match_parent">
                     </View>
                     <FrameLayout
@@ -85,7 +92,7 @@
                             android:id="@+id/receiver_code3"
                             android:layout_gravity="center"
                             android:textSize="50sp"
-                            android:text="3"
+                            android:text=""
                             android:textColor="@android:color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
@@ -95,6 +102,8 @@
                     <View
                         android:background="@android:color/white"
                         android:layout_width="1dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginBottom="50dp"
                         android:layout_height="match_parent">
                     </View>
                     <FrameLayout
@@ -104,7 +113,7 @@
                             android:id="@+id/receiver_code4"
                             android:layout_gravity="center"
                             android:textSize="50sp"
-                            android:text="4"
+                            android:text=""
                             android:textColor="@android:color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
@@ -120,7 +129,7 @@
                 android:layout_height="wrap_content">
             </androidx.recyclerview.widget.RecyclerView>
             <View
-                android:background="@android:color/white"
+                android:background="@color/login_line"
                 android:layout_width="match_parent"
                 android:layout_height="1dp">
             </View>

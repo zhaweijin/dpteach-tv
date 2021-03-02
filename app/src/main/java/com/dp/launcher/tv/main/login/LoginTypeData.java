@@ -5,6 +5,7 @@ public class LoginTypeData {
     private String sub_name;
     private int icon;
 
+
     public String getName() {
         return name;
     }
