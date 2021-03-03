@@ -15,7 +15,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        //试提代码
         //LoginMainActivity.launch(mContext);
     }
 }
